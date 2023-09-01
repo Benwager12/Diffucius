@@ -1,0 +1,12 @@
+{
+	"prefix": "",
+	"token": "",
+	"admins": [
+
+	],
+	"sd_auth": {
+		"host": "127.0.0.1",
+		"port": 7860,
+		"use_https": false
+	}
+}

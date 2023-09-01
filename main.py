@@ -40,4 +40,16 @@ for folder, _, files in walk("cogs"):
         if file.endswith(".py"):
             bot.load_extension(f"{folder}.{file[:-3]}")
 
+
+@bot.event
+async def on_ready():
+    print("Bot is ready.")
+    await bot.change_presence(
+        activity=disnake.Activity(
+            type=disnake.ActivityType.playing,
+            name=f"with {utility.get_model()}.",
+        ),
+        status=disnake.Status.online
+    )
+
 bot.run(utility.config.get("token"))
